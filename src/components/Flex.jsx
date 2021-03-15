@@ -18,5 +18,5 @@ export const Layout = styled(Flex)`
 `
 
 export const BodyLayout = styled(Layout)`
-  min-height: 600px;
+  margin: 64px auto 128px auto;
 `
