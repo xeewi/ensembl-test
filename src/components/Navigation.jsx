@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import { Flex, Layout } from './Flex';
+import { FlexCenter, Layout } from './Flex';
 
 const Container = styled.div`
   padding: 0 16px;
@@ -11,6 +11,7 @@ const Container = styled.div`
 
 const NavLayout = styled(Layout)`
   justify-content: space-between;
+  align-items: center;
 
   & h1 {
     color: #fff;
@@ -47,10 +48,10 @@ export const Navigation = () => {
     <Container>
       <NavLayout>
         <h1>DEMO Streaming</h1>
-        <Flex>
+        <FlexCenter>
           <LoginButton>Log in</LoginButton>
           <TrialButton>Start your free trial</TrialButton>
-        </Flex>
+        </FlexCenter>
       </NavLayout>
     </Container>
   );
