@@ -1,11 +1,10 @@
 import React from 'react'
 import styled from 'styled-components';
-import { Layout } from './Flex';
 
 const Container = styled.div`
   margin: 8px;
   width: 200px;
-  
+
   @media (max-width: 768px) {
     width: 100px;
   }

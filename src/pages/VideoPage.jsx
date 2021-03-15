@@ -1,16 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import styled from 'styled-components';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+
+import { getMovies, getSeries } from '../services/fakeAPI';
 
 import { BodyLayout } from '../components/Flex';
 import { Title } from '../components/Title';
 import { Video } from '../components/Video';
-import { getMovies, getSeries } from '../services/fakeAPI';
-
-const NoStyleLink = styled(Link)`
-  text-decoration: none;
-  color: inherit;
-`
 
 export const VideoPage = () => {
   let { programType } = useParams()
@@ -27,7 +22,7 @@ export const VideoPage = () => {
       .then(setVideos)
       .then(() => setLoading(false))
       .catch(() => setError(true))
-  }, [])
+  }, [programType])
 
   return (
     <>
