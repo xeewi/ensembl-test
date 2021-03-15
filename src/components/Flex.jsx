@@ -19,4 +19,9 @@ export const Layout = styled(Flex)`
 
 export const BodyLayout = styled(Layout)`
   margin: 64px auto 128px auto;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    margin: 8px auto 16px auto;
+  }
 `
